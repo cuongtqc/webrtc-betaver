@@ -21,7 +21,6 @@ var receiveTextarea = document.getElementById("dataChannelReceive");
 // HTML5 <video> elements
 var localVideo = document.querySelector('#localVideo');
 var remoteVideo = document.querySelector('#remoteVideo');
-var htmlVideo = '<video id="'+'" autoplay></video>';
 
 // Handler associated with 'Send' button
 sendButton.onclick = sendData;
