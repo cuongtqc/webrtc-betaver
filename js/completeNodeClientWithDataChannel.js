@@ -20,7 +20,8 @@ var receiveTextarea = document.getElementById("dataChannelReceive");
 
 // HTML5 <video> elements
 var localVideo = document.querySelector('#localVideo');
-var remoteVideo = document.querySelector('#remoteVideo');
+var remoteVideos = document.querySelector('#remoteVideos');
+var htmlVideo = '<video id="'+'" autoplay></video>';
 
 // Handler associated with 'Send' button
 sendButton.onclick = sendData;
@@ -39,9 +40,9 @@ var pc;
 
 // Peer Connection ICE protocol configuration (either Firefox or Chrome)
 var pc_config = webrtcDetectedBrowser === 'firefox' ?
-  {'iceServers': [{'url':'turn:52.32.110.187'}]}:
+  {'iceServers': [{'url':'turn:52.32.110.187:19302'}]}:
   //{'iceServers': [{'urls':'stun:23.21.150.121'}, {'url': 'turn:192.158.29.39:3478?transport=udp', 'credential': 'JZEOEt2V3Qb0y27GRntt2u2PAYA=', 'username': '28224511:1379330808'}]} : // IP address
-  {'iceServers': [{'url':'turn:52.32.110.187'}]};
+  {'iceServers': [{'url':'turn:52.32.110.187:19302'}]};
   //{'iceServers': [{'urls': 'stun:stun.l.google.com:19302'}, {'url': 'turn:192.158.29.39:3478?transport=udp', 'credential': 'JZEOEt2V3Qb0y27GRntt2u2PAYA=', 'username': '28224511:1379330808'}]};
 
 // Peer Connection contraints: (i) use DTLS; (ii) use data channel  
